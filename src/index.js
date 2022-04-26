@@ -1,6 +1,17 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const { createPool } = require('mysql')
+const db = createPool({
+    host: 'localhost',
+    user: 'developer',
+    password: '1234',
+    connectionLimit: 10
+
+})
+
+
+
 
 //settings
 app.set('port', 3000);
