@@ -7,11 +7,7 @@ const db = createPool({
     user: 'developer',
     password: '1234',
     connectionLimit: 10
-
-})
-
-
-
+});
 
 //settings
 app.set('port', 3000);
@@ -20,9 +16,7 @@ app.set('view egine', 'ejs');
 //midlewares
 
 //routes
-
 app.use(require('./routes/index.js'));
-
 //static files
 app.listen(app.get('port'), () => {
     console.log('server on port', app.get('port'));
