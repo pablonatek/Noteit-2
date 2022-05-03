@@ -16,9 +16,11 @@
 </header>
 
 <body>
-    <h1>
-        <%= texto %>
-    </h1>
+    <ul>
+    <% texto.forEach(function(texto) { %>
+        <li> Name:<%= texto.id %> Course:<%= texto.note %></li>
+     <% }); %> 
+    </ul>
 </body>
 <footer>
 

@@ -19,7 +19,7 @@ con.connect(function(err) {
     });
   });
 console.log(notas);
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
     res.render('index.ejs', { title: 'Noteit' , texto: notas});
 });
 
